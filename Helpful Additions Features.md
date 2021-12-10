@@ -1,8 +1,21 @@
 ## Features
 
-* A new button in sandbox that deletes all projectiles on screen to go along with the buttons that do the same with monkeys and bloons.
-* The option to play co-op games with less people than required (aka single player).
-* The powers menu is in sandbox mode. Doesn't use up powers as they are infinite in sandbox.
-* Adds a round info screen that allows you to view what is to come on any round.
-* Adds a new option in sandbox mode to switch the round set (eg. default or abr).
-* Extra in-game settings that allow you to enable and disable parts of the mod
+* ### In Any Game
+  * Adds a round info screen that allows you to view what is to come on any round.
+
+* ### In Sandbox
+  * Adds a new button that deletes all projectiles in sanbox mode.
+  * The powers menu is now in sandbox mode. Powers are not used up as they are infinite in sandbox.
+  * Adds a new option in sandbox mode to switch the round set (eg. default or abr).
+
+* ### Misc
+  * Adds the option to play co-op games with less people than required (aka single player).
+  * Extra in-game settings have been added that allow you to enable and disable parts of the mod.
+
+## Code
+
+The source for this mod can be found at: https://github.com/Baydock/Mod-Code/tree/main/Helpful%20Additions/Helpful%20Additions.
+
+## Download
+
+Link: https://github.com/Baydock/Mods/raw/main/Helpful%20Additons.dll
