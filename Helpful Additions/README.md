@@ -10,6 +10,7 @@
 
 * ### Misc
   * Adds the option to play co-op games with less people than required (aka single player).
+  * Allows for hidden maps such as Blons to be selected normally through challenge editor.
   * Extra in-game settings have been added that allow you to enable and disable parts of the mod.
 
 ## Code
