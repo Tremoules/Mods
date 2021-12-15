@@ -1,3 +1,7 @@
+## What it is
+
+Other mods can communicate with Helpful Additions in order for their content to appear within helpful additions, such as in the round info screen.
+
 ## Functions available
 
 * AddCustomBloon\
