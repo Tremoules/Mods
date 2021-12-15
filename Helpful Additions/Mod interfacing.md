@@ -30,33 +30,33 @@ Feel free to copy and edit it such that it fits your mod and coding style.
 ```csharp
 using System.Reflection;
 
-...
+namespace YourModNamespace {
+  public class YourMod : MelonMod {
+    private static MethodInfo AddCustomBloonByBytes = null;
+    private static MethodInfo AddCustomBloonByTexture2D = null;
 
-public class YourMod : MelonMod {
-  private static MethodInfo AddCustomBloonByBytes = null;
-  private static MethodInfo AddCustomBloonByTexture2D = null;
+    public override void OnApplicationStart() {
+        // Gets all loaded assemblies
+        Assembly[] assemblies = System.AppDomain.CurrentDomain.GetAssemblies();
+        // Find Helpful Addtions
+        Assembly helpfulAdditions = assemblies.FirstOrDefault(assembly => assembly.GetName().Name.Equals("Helpful Additions"));
+        // Get the Mod class in Helpful Addtions
+        System.Type mod = helpfulAdditions?.GetType("HelpfulAdditions.Mod");
+        // Get the AddCustomBloon method in Mod
+        AddCustomBloonByBytes = mod?.GetMethod("AddCustomBloon", new System.Type[] {
+            typeof(string), typeof(byte[]), typeof(byte[]), typeof(byte[]), typeof(Vector2?)
+        });
+        AddCustomBloonByTexture2D = mod?.GetMethod("AddCustomBloon", new System.Type[] {
+            typeof(string), typeof(Texture2D), typeof(Texture2D), typeof(Texture2D), typeof(Vector2?)
+        });
+    }
 
-  public override void OnApplicationStart() {
-      // Gets all loaded assemblies
-      Assembly[] assemblies = System.AppDomain.CurrentDomain.GetAssemblies();
-      // Find Helpful Addtions
-      Assembly helpfulAdditions = assemblies.FirstOrDefault(assembly => assembly.GetName().Name.Equals("Helpful Additions"));
-      // Get the Mod class in Helpful Addtions
-      System.Type mod = helpfulAdditions?.GetType("HelpfulAdditions.Mod");
-      // Get the AddCustomBloon method in Mod
-      AddCustomBloonByBytes = mod?.GetMethod("AddCustomBloon", new System.Type[] {
-          typeof(string), typeof(byte[]), typeof(byte[]), typeof(byte[]), typeof(Vector2?)
-      });
-      AddCustomBloonByTexture2D = mod?.GetMethod("AddCustomBloon", new System.Type[] {
-          typeof(string), typeof(Texture2D), typeof(Texture2D), typeof(Texture2D), typeof(Vector2?)
-      });
+    private static void AddCustomBloon(string bloonId, byte[] icon, byte[] edge, byte[] span, Vector2? iconSize = null) =>
+        AddCustomBloonByBytes?.Invoke(null, new object[] { bloonId, icon, edge, span, iconSize });
+
+    private static void AddCustomBloon(string bloonId, Texture2D icon, Texture2D edge, Texture2D span, Vector2? iconSize = null) =>
+        AddCustomBloonByTexture2D?.Invoke(null, new object[] { bloonId, icon, edge, span, iconSize });
   }
-
-  private static void AddCustomBloon(string bloonId, byte[] icon, byte[] edge, byte[] span, Vector2? iconSize = null) =>
-      AddCustomBloonByBytes?.Invoke(null, new object[] { bloonId, icon, edge, span, iconSize });
-
-  private static void AddCustomBloon(string bloonId, Texture2D icon, Texture2D edge, Texture2D span, Vector2? iconSize = null) =>
-      AddCustomBloonByTexture2D?.Invoke(null, new object[] { bloonId, icon, edge, span, iconSize });
 }
 ```
 Note: I make use of the `?.` operator as my choice of null check. Make sure to include some kind of null check wherever I use it.
