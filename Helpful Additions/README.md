@@ -13,6 +13,11 @@
   * Allows for hidden maps such as Blons to be selected normally through challenge editor.
   * Extra in-game settings have been added that allow you to enable and disable parts of the mod.
 
+## Other mod support
+
+Helpful Additions can be interacted with by other mods for parts of the mod such as the round info screen.\
+Documentation of how to do this with your own mod can be found here: https://github.com/Baydock/Mods/blob/main/Helpful%20Additions/Mod%20interfacing.md.
+
 ## Code
 
 The source for this mod can be found at: https://github.com/Baydock/Mod-Code/tree/main/Helpful%20Additions/Helpful%20Additions.
