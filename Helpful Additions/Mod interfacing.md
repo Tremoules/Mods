@@ -39,18 +39,15 @@ public class YourMod : MelonMod {
       Assembly[] assemblies = System.AppDomain.CurrentDomain.GetAssemblies();
       // Find Helpful Addtions
       Assembly helpfulAdditions = assemblies.FirstOrDefault(assembly => assembly.GetName().Name.Equals("Helpful Additions"));
-      // If found
-      if (!(helpfulAdditions is null)) {
-          // Get the Mod class in Helpful Addtions
-          System.Type mod = helpfulAdditions.GetType("HelpfulAdditions.Mod");
-          // Get the AddCustomBloon method in Mod
-          AddCustomBloonByBytes = mod.GetMethod("AddCustomBloon", new System.Type[] {
-              typeof(string), typeof(byte[]), typeof(byte[]), typeof(byte[]), typeof(Vector2?)
-          });
-          AddCustomBloonByTexture2D = mod.GetMethod("AddCustomBloon", new System.Type[] {
-              typeof(string), typeof(Texture2D), typeof(Texture2D), typeof(Texture2D), typeof(Vector2?)
-          });
-      }
+      // Get the Mod class in Helpful Addtions
+      System.Type mod = helpfulAdditions?.GetType("HelpfulAdditions.Mod");
+      // Get the AddCustomBloon method in Mod
+      AddCustomBloonByBytes = mod?.GetMethod("AddCustomBloon", new System.Type[] {
+          typeof(string), typeof(byte[]), typeof(byte[]), typeof(byte[]), typeof(Vector2?)
+      });
+      AddCustomBloonByTexture2D = mod?.GetMethod("AddCustomBloon", new System.Type[] {
+          typeof(string), typeof(Texture2D), typeof(Texture2D), typeof(Texture2D), typeof(Vector2?)
+      });
   }
 
   private static void AddCustomBloon(string bloonId, byte[] icon, byte[] edge, byte[] span, Vector2? iconSize = null) =>
