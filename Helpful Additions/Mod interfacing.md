@@ -36,7 +36,7 @@ public class YourMod : MelonMod {
   private static MethodInfo AddCustomBloonByBytes = null;
   private static MethodInfo AddCustomBloonByTexture2D = null;
 
-  public override void OnApplicationStart() {
+  public override void OnApplicationLateStart() {
       // Gets all loaded assemblies
       Assembly[] assemblies = System.AppDomain.CurrentDomain.GetAssemblies();
       // Find Helpful Addtions
