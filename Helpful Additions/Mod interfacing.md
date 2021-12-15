@@ -3,7 +3,8 @@
 * AddCustomBloon\
 This function allows other modders to add custom bloon graphics, such that they show up within my mod.
 ```csharp
-/// <summary>This function allows other modders to add custom bloon graphics (in the form of bytes from an image file), such that they show up within my mod.</summary>
+/// <summary>This function allows other modders to add custom bloon graphics (in the form of bytes from an image file),
+/// such that they show up within my mod.</summary>
 /// <param name="bloonId">The id of the custom bloon being added</param>
 /// <param name="icon">The icon of the custom bloon being added as bytes from an image file</param>
 /// <param name="edge">The graphic for the ends of a timespan for the custom bloon as bytes from an image file</param>
@@ -11,7 +12,8 @@ This function allows other modders to add custom bloon graphics, such that they 
 /// <param name="iconSize">The size of the icon in Unity, where the image size is the original, and 200 is the maximum recommended size</param>
 public static void AddCustomBloon(string bloonId, byte[] icon, byte[] edge, byte[] span, Vector2? iconSize = null);
 
-/// <summary>This function allows other modders to add custom bloon graphics (in the form of a Texture2D), such that they show up within my mod.</summary>
+/// <summary>This function allows other modders to add custom bloon graphics (in the form of a Texture2D),
+/// such that they show up within my mod.</summary>
 /// <param name="bloonId">The id of the custom bloon being added</param>
 /// <param name="icon">The icon of the custom bloon being added as a Texture2D</param>
 /// <param name="edge">The graphic for the ends of a timespan for the custom bloon as a Texture2D</param>
