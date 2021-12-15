@@ -5,7 +5,7 @@ Other mods can communicate with Helpful Additions in order for their content to 
 ## Functions available
 
 * AddCustomBloon\
-This function allows other modders to add custom bloon graphics, such that they show up within my mod.
+This function allows other modders to add custom bloon graphics, such that they show up within Helpful Additions.
 ```csharp
 /// <summary>This function allows other modders to add custom bloon graphics in the form of bytes from an image file.</summary>
 /// <param name="bloonId">The id of the custom bloon being added</param>
