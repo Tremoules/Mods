@@ -9,7 +9,8 @@ This function allows other modders to add custom bloon graphics, such that they 
 /// <param name="icon">The icon of the custom bloon being added as bytes from an image file</param>
 /// <param name="edge">The graphic for the ends of a timespan for the custom bloon as bytes from an image file</param>
 /// <param name="span">The graphic for the span of a timespan for the custom bloon as bytes from an image file</param>
-/// <param name="iconSize">The size of the icon in Unity, where the image size is the original, and 200 is the maximum recommended size</param>
+/// <param name="iconSize">The size of the icon in Unity, where the image size is the original,
+/// and 200 is the maximum recommended size</param>
 public static void AddCustomBloon(string bloonId, byte[] icon, byte[] edge, byte[] span, Vector2? iconSize = null);
 
 /// <summary>This function allows other modders to add custom bloon graphics (in the form of a Texture2D),
@@ -18,7 +19,8 @@ public static void AddCustomBloon(string bloonId, byte[] icon, byte[] edge, byte
 /// <param name="icon">The icon of the custom bloon being added as a Texture2D</param>
 /// <param name="edge">The graphic for the ends of a timespan for the custom bloon as a Texture2D</param>
 /// <param name="span">The graphic for the span of a timespan for the custom bloon as a Texture2D</param>
-/// <param name="iconSize">The size of the icon in Unity, where the image size is the original, and 200 is the maximum recommended size</param>
+/// <param name="iconSize">The size of the icon in Unity, where the image size is the original,
+/// and 200 is the maximum recommended size</param>
 public static void AddCustomBloon(string bloonId, Texture2D icon, Texture2D edge, Texture2D span, Vector2? iconSize = null);
 ```
 
