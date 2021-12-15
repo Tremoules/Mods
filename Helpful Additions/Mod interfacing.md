@@ -60,4 +60,3 @@ public class YourMod : MelonMod {
 }
 ```
 Note: I make use of the `?.` operator as my choice of null check. Make sure to include some kind of null check wherever I use it.
-```
