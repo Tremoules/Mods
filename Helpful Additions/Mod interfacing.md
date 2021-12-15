@@ -28,7 +28,12 @@ The following code is an example of how to set up all available functions for us
 Feel free to copy and edit it such that it fits your mod and coding style.
 
 ```csharp
+using HarmonyLib;
+using MelonLoader;
+using OrangeBloon.Properties;
+using System.Linq;
 using System.Reflection;
+using UnityEngine;
 
 namespace YourModNamespace {
   public class YourMod : MelonMod {
