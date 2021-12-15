@@ -57,9 +57,6 @@ public class YourMod : MelonMod {
 
   private static void AddCustomBloon(string bloonId, Texture2D icon, Texture2D edge, Texture2D span, Vector2? iconSize = null) =>
       AddCustomBloonByTexture2D?.Invoke(null, new object[] { bloonId, icon, edge, span, iconSize });
-  
-  ...
-  
 }
 ```
 Note: I make use of the `?.` operator as my choice of null check. Make sure to include some kind of null check wherever I use it.
