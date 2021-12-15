@@ -29,7 +29,9 @@ Feel free to copy and edit it such that it fits your mod and coding style.
 
 ```csharp
 using System.Reflection;
+
 ...
+
 public class YourMod : MelonMod {
   private static MethodInfo AddCustomBloonByBytes = null;
   private static MethodInfo AddCustomBloonByTexture2D = null;
@@ -57,6 +59,7 @@ public class YourMod : MelonMod {
       AddCustomBloonByTexture2D?.Invoke(null, new object[] { bloonId, icon, edge, span, iconSize });
   
   ...
+  
 }
 ```
 Note: I make use of the `?.` operator as my choice of null check. Make sure to include some kind of null check wherever I use it.
